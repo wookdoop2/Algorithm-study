@@ -19,7 +19,6 @@ while 1:
         print(answer)
         break
     tmp = min_num[:]
-    min_num = []
     min_num = cal(tmp)
     answer += 1
     if min(min_num) == 1:
