@@ -10,4 +10,3 @@ def solution(arr, divisor):
         return answer
     answer.sort()
     return answer
-ㄴ
