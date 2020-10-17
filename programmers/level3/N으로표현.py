@@ -8,11 +8,14 @@ def solution(N, number):
         _set_[i].add(int(str(N) * i))
         for j in range(1, i):
             for k in _set_[j]:
-                _set_[i].add(int(k + N))
-                _set_[i].add(int(k - N))
-                _set_[i].add(int(k * N))
-                _set_[i].add(int(k / N))
+                for m in _set_[i - j]:
+                    _set_[i].add(int(k + m))
+                    _set_[i].add(int(k - m))
+                    _set_[i].add(int(k * m))
+                    if k == 0:
+                        continue
+                    if m != 0:
+                        _set_[i].add(int(k / m))
         if number in _set_[i]:
             return i
     return -1
-
