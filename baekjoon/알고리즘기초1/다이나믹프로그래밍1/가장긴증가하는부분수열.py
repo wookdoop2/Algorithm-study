@@ -1,3 +1,5 @@
+# Beakjoon Online Judge
+# Dynamic Programming
 count = int(input())
 nums = list(map(int, input().split(' ')))
 
@@ -5,15 +7,12 @@ _list_ = [0] * count
 
 last_num = 0
 
-for i in range(count):
-    if i == 0:
-        last_num = nums[i]
-        _list_[i] = 1
-    else:
-        if last_num < nums[i]:
-            _list_[i] = _list_[i - 1] + 1
-            last_num = nums[i]
-        else:
-            _list_[i] = _list_[i - 1]
-            last_num = nums[i]
+_list_[0] = 1
+
+for i in range(1, count):
+    _list_[i] = 1
+    for j in range(0, i):
+        if nums[j] < nums[i] and _list_[j] + 1 > _list_[i]:
+            _list_[i] = _list_[j] + 1
+
 print(max(_list_))
