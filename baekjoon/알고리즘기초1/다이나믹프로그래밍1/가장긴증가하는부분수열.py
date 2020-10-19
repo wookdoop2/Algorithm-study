@@ -1,11 +1,9 @@
 # Beakjoon Online Judge
 # Dynamic Programming
 count = int(input())
-nums = list(map(int, input().split(' ')))
+nums = list(map(int, input().split()))
 
 _list_ = [0] * count
-
-last_num = 0
 
 _list_[0] = 1
 
