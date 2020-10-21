@@ -1,3 +1,5 @@
+# Baekjoon Online Judge
+# Dynamic Programming
 max_num = 100000
 _list_ = [0] * (max_num + 1)
 
