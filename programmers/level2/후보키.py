@@ -1,6 +1,6 @@
 # Programmers
 # level 2
-# https://programmers.co.kr/learn/courses/30/lessons/42888
+# https://programmers.co.kr/learn/courses/30/lessons/42890
 # 2019 KAKAO BLINK RECRUITMENT
 # Reference : https://eda-ai-lab.tistory.com/505
 from itertools import combinations
