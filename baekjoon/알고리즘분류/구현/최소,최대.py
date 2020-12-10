@@ -1,6 +1,6 @@
 # Baekjoon Online Judge
 # Simulation
-# https://www.acmicpc.net/problem/1107
+# https://www.acmicpc.net/problem/10818
 count = int(input())
 _list_ = list(map(int, input().split()))
 
