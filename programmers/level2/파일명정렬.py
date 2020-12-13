@@ -2,34 +2,43 @@
 # level 2
 # https://programmers.co.kr/learn/courses/30/lessons/17686
 # 2018 KAKAO BLINK RECRUITMENT
+def dividing(idx, name):
+    _list_ = ['', '', idx]
+    start_idx = 0
+    num_length = 0
+    num_check = 0
+
+    # Split head, number, tail
+    for i in range(len(name)):
+        if num_check == 0 and name[i].isdigit():
+            num_check = 1
+            num_length += 1
+            start_idx = i
+            continue
+
+        if num_check == 1 and name[i].isdigit():
+            num_length += 1
+
+        if num_check == 1 and not name[i].isdigit():
+            break
+
+    _list_[0] = name[:start_idx].lower()
+    _list_[1] = int(name[start_idx:start_idx + num_length])
+
+    return _list_
+
+
 def solution(files):
     answer = []
-    _list_ = [[0, '', '', ''] for _ in range(len(files))]
+    files_list = []
 
-    for i in range(len(files)):
-        file_name = files[i]
-        idx = i
-        start_idx = 0
-        end_idx = 0
+    for idx, file_name in enumerate(files):
+        fn = dividing(idx, file_name)
+        files_list.append(fn)
 
-        for j in range(0, len(file_name)):
-            if file_name[j].isdigit() == False and file_name[j + 1].isdigit():
-                start_idx = j + 1
-            elif file_name[j].isdigit() and file_name[j + 1].isdigit() == False:
-                end_idx = j + 1
-                break
-            else:
-                continue
+    new_files = sorted(files_list, key=lambda x: (x[0], x[1], x[2]))
 
-        _list_[i][0] = idx
-        _list_[i][1] = file_name[:start_idx].lower()
-        _list_[i][2] = str(int(file_name[start_idx:end_idx]))
-        _list_[i][3] = file_name[end_idx:].lower()
-    print(_list_)
-    # 정렬
-    _list_ = sorted(_list_, key=lambda x: (x[1], x[2], x[3]))
-
-    for i in range(len(_list_)):
-        answer.append(files[_list_[i][0]])
+    for file in new_files:
+        answer.append(files[file[2]])
 
     return answer
