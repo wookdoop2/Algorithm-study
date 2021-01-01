@@ -20,29 +20,28 @@ def check(M, N, board):
                 count += 1
 
     if count != N * N:
-        return 0
+        return False
     else:
-        return 1
+        return True
 
 
-def add(start_x, start_y, N, board, key):
-    for i in range(N):
-        for j in range(N):
-            board[start_x + i][start_y + j] += key[i][j]
+def add(y, x, M, board, key):
+    for i in range(M):
+        for j in range(M):
+            board[y + i][x + j] += key[i][j]
 
     return board
 
 
-def minus(start_x, start_y, N, board, key):
-    for i in range(N):
-        for j in range(N):
-            board[start_x + i][start_y + j] -= key[i][j]
+def minus(y, x, M, board, key):
+    for i in range(M):
+        for j in range(M):
+            board[y + i][x + j] -= key[i][j]
 
     return board
 
 
 def solution(key, lock):
-    answer = True
     M = len(key)
     N = len(lock)
 
@@ -55,12 +54,12 @@ def solution(key, lock):
 
     for i in range(4):
         key = rotate_key(key, M)
-        for m in range(len(board) - N):
-            for n in range(len(board) - N):
-                board = add(m, n, N, board, key)
-                if check(M, N, board) == 1:
+        for start_y in range(len(board) - (M - 1)):
+            for start_x in range(len(board) - (M - 1)):
+                board = add(start_y, start_x, M, board, key)
+                if check(M, N, board) == True:
                     return True
                 else:
-                    board = minus(m, n, N, board, key)
+                    board = minus(start_y, start_x, M, board, key)
 
     return False
