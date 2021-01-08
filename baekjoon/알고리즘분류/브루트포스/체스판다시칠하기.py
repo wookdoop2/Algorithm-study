@@ -6,9 +6,25 @@ _list_ = []
 for i in range(N):
     _list_.append(list(input()))
 
-board = []
-for i in range(M - 8 + 1):
-    for j in range(N - 8 + 1):
-        for y in range(j + 8):
-            board.append(_list_[y][i:i+8])
+answer = 9999
+for i in range(N - 8 + 1):
+    for j in range(M - 8 + 1):
+        count_start_b = 0
+        count_start_w = 0
+        for y in range(i, i + 8):
+            for x in range(j, j + 8):
+                if (y + x) % 2 == 0:
+                    if _list_[y][x] != 'B':
+                        count_start_b += 1
+                    if _list_[y][x] != 'W':
+                        count_start_w += 1
+                else:
+                    if _list_[y][x] != 'W':
+                        count_start_b += 1
+                    if _list_[y][x] != 'B':
+                        count_start_w += 1
+        answer = min(answer, count_start_b, count_start_w)
+
+print(answer)
+
 
