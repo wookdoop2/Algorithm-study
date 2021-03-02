@@ -1,38 +1,30 @@
 # Programmers
 # level 2
-# Heap
 # https://programmers.co.kr/learn/courses/30/lessons/42626
-def check(scoville, K):
-    count = 0
-    for i in scoville:
-        if i >= K:
-            count += 1
-    if count == len(scoville):
-        return True
-    else:
-        return False
+# 힙(Heap)
+import heapq
 
 
 def solution(scoville, K):
+    scoville.sort()
     answer = 0
-    total_length = len(scoville)
+    check = 0
 
-    while 1:
-        front = scoville.pop(0)
-        back = scoville.pop(0)
-        scoville.insert(0, front + (back * 2))
+    heapq.heapify(scoville)
+    while scoville[0] < K:
+        num1 = heapq.heappop(scoville)
+        num2 = heapq.heappop(scoville)
+
+        num3 = num1 + (num2 * 2)
+        heapq.heappush(scoville, num3)
 
         answer += 1
 
-        if answer == total_length - 1:
-            if scoville[0] < 7:
-                return -1
-            else:
-                return answer
+        if len(scoville) == 1 and scoville[0] < K:
+            check = 1
+            break
 
-        if check(scoville, K):
-            return answer
-        else:
-            continue
-
-    return answer
+    if check == 0:
+        return answer
+    else:
+        return -1
