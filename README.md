@@ -12,3 +12,6 @@ https://brownbears.tistory.com/454
 
 Heapq
 https://www.daleseo.com/python-heapq/
+
+Dijkstra algorithm
+https://www.fun-coding.org/Chapter20-shortest-live.html
