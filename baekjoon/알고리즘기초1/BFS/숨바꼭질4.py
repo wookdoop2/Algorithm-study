@@ -1,19 +1,28 @@
 # Baekjoon Online Judge
 # BFS
 # https://www.acmicpc.net/problem/13913
+from collections import deque
+
+
+def go(n, m):
+    if n != m:
+        go(n, route[m])
+    print(m, end=' ')
+
+
 start, end = map(int, input().split())
 max_num = 200000
 check = [0] * (max_num + 1)
 count = [0] * (max_num + 1)
 route = [0] * (max_num + 1)
-_list_ = []
+_list_ = deque()
 
 check[start] = 1
 _list_.append(start)
 
 while len(_list_) != 0:
 
-    now = _list_.pop(0)
+    now = _list_.popleft()
 
     if 0 <= now - 1 <= max_num and check[now - 1] == 0:
         _list_.append(now - 1)
@@ -38,8 +47,4 @@ while len(_list_) != 0:
     #     break
 
 print(count[end])
-
-print(end, end=' ')
-while start != end:
-    print(route[end], end=' ')
-    end = route[end]
+go(start, end)
