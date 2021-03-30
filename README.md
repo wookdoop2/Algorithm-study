@@ -47,6 +47,7 @@ Python ~~Java~~
   <ol>
     <li><a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=3&contestProbId=AWBOHEx66kIDFAWr&categoryId=AWBOHEx66kIDFAWr&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=PYTHON&select-1=3&pageSize=10&pageIndex=6">최장 공통 부분수열</a></li>
     <li><a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=3&contestProbId=AWBJAVpqrzQDFAWr&categoryId=AWBJAVpqrzQDFAWr&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=PYTHON&select-1=3&pageSize=10&pageIndex=6">0/1 Knapsack</a></li>
+    <li><a href="https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=3&contestProbId=AV-0U8FKZLQDFAXT&categoryId=AV-0U8FKZLQDFAXT&categoryType=CODE&problemTitle=&orderBy=FIRST_REG_DATETIME&selectCodeLang=PYTHON&select-1=3&pageSize=10&pageIndex=6">홍준이의 숫자놀이</a></li>
   </ol>
 </details>
 
