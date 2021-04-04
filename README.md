@@ -1,16 +1,16 @@
-# 코딩테스트를 위한 알고리즘 공부
+## 코딩테스트를 위한 알고리즘 공부
 
 <br />
 
 
-## 사용 언어
+### 사용 언어
 
 Python ~~Java~~
 
 <br />
 
 
-## 알고리즘 문제풀이 사이트
+### 알고리즘 문제풀이 사이트
 
 [Baekjoon Online Judge](https://www.acmicpc.net/)
 
@@ -21,7 +21,7 @@ Python ~~Java~~
 <br />
 
 
-## 여러운 문제들
+### 복습이 필요한 문제
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -54,19 +54,16 @@ Python ~~Java~~
 <br />
 
 
-## 참고 사이트
+### 참고 사이트
 
-진수표현
-https://brownbears.tistory.com/468
+[T Academy 기초 알고리즘과 파이썬 코딩](https://www.youtube.com/watch?v=AhCib1thS7M&list=PL9mhQYIlKEhfg0aLdaO04wYUovLMXY4DU&index=1)
 
-소수판별
-https://velog.io/@koyo/python-is-prime-number
+[Base N Expression](https://brownbears.tistory.com/468)
 
-최소공배수 & 최대공약수
-https://brownbears.tistory.com/454
+[Prime Number](https://velog.io/@koyo/python-is-prime-number)
 
-Heapq
-https://www.daleseo.com/python-heapq/
+[LCM & GCD](https://brownbears.tistory.com/454)
 
-Dijkstra algorithm
-https://www.fun-coding.org/Chapter20-shortest-live.html
+[Heapq](https://www.daleseo.com/python-heapq/)
+
+[Dijkstra Algorithm](https://www.fun-coding.org/Chapter20-shortest-live.html)
