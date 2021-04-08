@@ -1,3 +1,7 @@
+# SW Expert Academy
+# Difficulty 3
+
+
 def direction_change(c):
     if c == 'U':
         return 1, '^'
