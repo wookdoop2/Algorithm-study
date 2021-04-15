@@ -1,3 +1,8 @@
+# Baekjoon Online Judge
+# Brute Force
+# https://www.acmicpc.net/problem/2798
+# 출처 : https://github.com/tony9402/baekjoon
+
 import sys
 from itertools import combinations
 

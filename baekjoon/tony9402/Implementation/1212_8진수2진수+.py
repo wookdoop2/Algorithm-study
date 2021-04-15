@@ -1,3 +1,8 @@
+# Baekjoon Online Judge
+# Implementation
+# https://www.acmicpc.net/problem/1212
+# 출처 : https://github.com/tony9402/baekjoon
+
 # 8진수 -> 2진수
 # 8진수(0, 1, 2, 3, 4, 5, 6, 7) -> 2진수(000, 001, 010, 011, 100, 101, 110, 100)
 binary_list = ["000", "001", "010", "011", "100", "101", "110", "111"]

@@ -1,3 +1,8 @@
+# Baekjoon Online Judge
+# Graph Traversal
+# https://www.acmicpc.net/problem/2606
+# 출처 : https://github.com/tony9402/baekjoon
+
 import sys
 from collections import deque
 

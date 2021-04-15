@@ -1,3 +1,8 @@
+# Baekjoon Online Judge
+# Two Pointers
+# https://www.acmicpc.net/problem/11728
+# 출처 : https://github.com/tony9402/baekjoon
+
 import sys
 
 input = sys.stdin.readline
