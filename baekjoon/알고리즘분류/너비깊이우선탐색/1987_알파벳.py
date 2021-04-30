@@ -1,3 +1,7 @@
+# Baekjoon Online Judge
+# DFS BFS
+# https://www.acmicpc.net/problem/1987
+
 import sys
 
 input = sys.stdin.readline
@@ -7,6 +11,7 @@ sys.setrecursionlimit(10000)
 di = [[-1, 0], [0, 1], [1, 0], [0, -1]]
 
 
+# DFS
 def dfs(y, x, c):
 
     global history
@@ -29,7 +34,11 @@ def dfs(y, x, c):
 R, C = map(int, input().split())
 
 board = [list(input().rstrip()) for _ in range(R)]
-history = set()  # 지나온 모든 칸의 알파벳 저장
+
+# 문자 -> 아스키 코드
+for i in range(R):
+    for j in range(C):
+        board[i][j] = ord(board[i][j])
 answer = 1
 
 # DFS
@@ -37,4 +46,4 @@ dfs(0, 0, answer)
 
 print(answer)
 
-# 시간초과가 떠서 PyPy3로 제출
+# set 사용 시 시간초과
